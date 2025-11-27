@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    # url: jdbc:postgresql://localhost:5432/mydatabase
+    username: postgres
+    password: 1
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: update
+  #   show-sql: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework: DEBUG
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+
