@@ -1,0 +1,14 @@
+springdoc:
+  api-docs:
+    enabled: true 
+    path: /vacancy/v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /vacancy/swagger-ui.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: "/vacancy"

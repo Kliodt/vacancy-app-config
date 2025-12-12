@@ -5,3 +5,10 @@ springdoc:
   swagger-ui:
     enabled: true
     path: /organization/swagger-ui.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: "/organization"
