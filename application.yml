@@ -7,4 +7,9 @@ eureka:
 feign:
   hystrix:
     enabled: true
+    
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
 
