@@ -12,3 +12,13 @@ management:
       exposure:
         include: "*"
       base-path: "/vacancy"
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      user-service:
+        failureRateThreshold: 50
+        slidingWindowSize: 10
+      organization-service:
+        failureRateThreshold: 50
+        slidingWindowSize: 10

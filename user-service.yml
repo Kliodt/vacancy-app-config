@@ -12,3 +12,10 @@ management:
       exposure:
         include: "*"
       base-path: "/user"
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      vacancy-service:
+        failureRateThreshold: 50
+        slidingWindowSize: 10
