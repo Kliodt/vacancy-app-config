@@ -19,3 +19,8 @@ resilience4j:
       vacancy-service:
         failureRateThreshold: 50
         slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        waitDurationInOpenState: 30s
+        registerHealthIndicator: true
+        ignore-exceptions:
+        - feign.FeignException$NotFound
