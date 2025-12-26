@@ -24,3 +24,36 @@ resilience4j:
         registerHealthIndicator: true
         ignore-exceptions:
         - feign.FeignException$NotFound
+
+eureka:
+  client:
+    service-url:
+      # todo: change in docker
+      # defaultZone: http://eureka-server:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  datasource:
+  driver-class-name: org.postgresql.Driver
+  url: ${DB_URL}
+  username: ${DB_USER}
+  password: ${DB_PASS}
+
+jpa:
+  show-sql: true
+  hibernate:
+    ddl-auto: validate
+
+flyway:
+  enabled: true
+  url: ${DB_URL}
+  user: ${DB_USER}
+  password: ${DB_PASS}
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration-ms: 3600000  # 1 hour
+
+supervisor:
+  email: ${SUPERVISOR_EMAIL}
+  pass: ${SUPERVISOR_PASS}
