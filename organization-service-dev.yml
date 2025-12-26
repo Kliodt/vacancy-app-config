@@ -28,10 +28,10 @@ spring:
     locations: classpath:db/migration
     baseline-on-migrate: true
 
-eureka:
-  client:
-    service-url:
-      # todo: change in docker
-      # defaultZone: http://eureka-server:8761/eureka/
-      defaultZone: http://localhost:8761/eureka/
+# eureka:
+#   client:
+#     service-url:
+#       # todo: change in docker
+#       # defaultZone: http://eureka-server:8761/eureka/
+#       defaultZone: http://localhost:8761/eureka/
  
