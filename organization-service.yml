@@ -12,3 +12,7 @@ management:
       exposure:
         include: "*"
       base-path: "/organization"
+
+jwt:
+  secret: ${JWT_SECRET}
+  
