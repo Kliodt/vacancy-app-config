@@ -1,7 +1,4 @@
 spring:
-  output:
-    ansi:
-      enabled: ALWAYS
   cloud:
     gateway:
       routes:
@@ -19,13 +16,11 @@ spring:
           uri: lb://vacancy-service
           predicates:
             - Path=/api/vacancies, /api/vacancies/**, /vacancy/**
-
-# eureka:
-#   client:
-#     service-url:
-#       # todo: change in docker
-#       # defaultZone: http://eureka-server:8761/eureka/
-#       defaultZone: http://localhost:8761/eureka/
+            
+        - id: kafka-ui
+          uri: http://kafka-ui:8080
+          predicates:
+            - Path=/kafka/** 
 
 springdoc:
   api-docs:
