@@ -18,7 +18,7 @@ spring:
             - Path=/api/vacancies, /api/vacancies/**, /vacancy/**
             
         - id: kafka-ui
-          uri: http://kafka-ui:8080
+          uri: http://kafka-ui:8080 # in docker
           predicates:
             - Path=/kafka/** 
           # filters:
