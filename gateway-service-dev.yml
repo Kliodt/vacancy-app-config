@@ -21,8 +21,8 @@ spring:
           uri: http://kafka-ui:8080
           predicates:
             - Path=/kafka/** 
-          filters:
-            - StripPrefix=1
+          # filters:
+          #   - StripPrefix=1
 
 springdoc:
   api-docs:
