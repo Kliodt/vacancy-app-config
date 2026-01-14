@@ -5,3 +5,14 @@ eureka:
       # todo: change in docker
       # defaultZone: http://eureka-server:8761/eureka/
       defaultZone: http://localhost:8761/eureka/
+
+spring:
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP}  # список брокеров
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: 1
+    consumer:
+      # group-id: vacancy-service
+      auto-offset-reset: earliest
