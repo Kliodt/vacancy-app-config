@@ -5,12 +5,12 @@ spring:
         - id: organization-service
           uri: lb://organization-service
           predicates:
-            - Path=/api/organizations, /api/organizations/**, /organization/**
+            - Path=/api/organizations, /api/organizations/**, /auth/organization/**, /organization/**
 
         - id: user-service
           uri: lb://user-service
           predicates:
-            - Path=/api/users, /api/users/**, /auth/**, /user/**
+            - Path=/api/users, /api/users/**, /auth/user/**, /user/**
 
         - id: vacancy-service
           uri: lb://vacancy-service
