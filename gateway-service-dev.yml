@@ -17,6 +17,11 @@ spring:
           predicates:
             - Path=/api/vacancies, /api/vacancies/**, /vacancy/**
             
+        - id: file-service
+          uri: lb://file-service
+          predicates:
+            - Path=/file, /file/**
+            
         - id: kafka-ui
           uri: http://kafka-ui:8080 # in docker
           predicates:
