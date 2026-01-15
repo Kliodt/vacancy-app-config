@@ -49,3 +49,6 @@ springdoc:
       - name: Organization Service
         url: /organization/v3/api-docs
 
+      - name: File Service
+        url: /file/v3/api-docs
+
