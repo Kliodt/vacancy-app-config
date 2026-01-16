@@ -21,6 +21,11 @@ spring:
           uri: lb://file-service
           predicates:
             - Path=/file, /file/**
+
+        - id: notification-ws
+          uri: lb:ws://notification-service
+          predicates:
+            - Path=/ws/**
             
         - id: kafka-ui
           uri: http://kafka-ui:8080 # in docker
