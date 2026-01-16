@@ -2,9 +2,7 @@
 eureka:
   client:
     service-url:
-      # todo: change in docker
-      # defaultZone: http://eureka-server:8761/eureka/
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka/}
 
 spring:
   kafka:
