@@ -29,20 +29,6 @@ spring:
           # filters:
           #   - StripPrefix=1
 
-        - id: minio-ui
-          uri: http://minio:9001
-          predicates:
-            - Path=/minio/ui/**, /minio/ui
-          filters:
-            - RewritePath=/minio/ui/(?<segment>.*), /${segment}
-            - AddRequestHeader=Host, localhost:8080
-        
-        - id: minio-api
-          uri: http://minio:9000
-          predicates:
-            - Path=/minio/**
-          filters:
-            - AddRequestHeader=Host, localhost:8080
 
 springdoc:
   api-docs:
