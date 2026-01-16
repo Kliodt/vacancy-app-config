@@ -29,6 +29,16 @@ spring:
           # filters:
           #   - StripPrefix=1
 
+        - id: minio-api
+          uri: http://minio:9000
+          predicates:
+            - Path=/minio, /minio/**
+
+        - id: minio-ui
+          uri: http://minio:9001
+          predicates:
+            - Path=/minio/ui, /minio/ui/**
+
 springdoc:
   api-docs:
     enabled: true
