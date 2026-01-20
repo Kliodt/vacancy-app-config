@@ -36,3 +36,6 @@ management:
       exposure:
         include: "*"
       base-path: "/file"
+
+files:
+  storage-dir: ${STORAGE_DIR}
