@@ -5,10 +5,22 @@ spring:
     username: ${DB_USER}
     password: ${DB_PASS}
 
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+    url: ${DB_URL}
+    user: ${DB_USER}
+    password: ${DB_PASS}
 
 springdoc:
   api-docs:
